@@ -1,0 +1,26 @@
+<p class ="red-color">SUMMER INTERNSHIP</p>
+<h3 >application form</h3>
+<label for="name">NAME:</label>
+<input type ="text" [(ngModel)]="name"  placeholder="enter the name"><br><br>
+<label for="dob">DATE-OF-BIRTH:</label>
+<input type ="date" [(ngModel)]= "birthday" id="birthday" name ="birthday"><br><br>
+<label for="email">EMAIL:</label>
+<input type ="text" [(ngModel)]= "email" placeholder="enter the email"><br><br>
+<label for="gender">GENDER:</label>
+<input type ="radio" [(ngModel)]="gender" name="gender" value="male">male
+<input type ="radio" [(ngModel)]= "gender" name="gender" value="female" >female
+<input type ="radio" [(ngModel)] ="gender" name="gender" value="others">others<br><br>
+<label for="institute">INSTITUTE:</label>
+<input type ="textbox" [(ngModel)]="institute"  placeholder="name of institute"><br><br>
+<label for="phoneno">PHONE-NUMBER:</label>
+<input type="text" [(ngModel)]="phoneno" placeholder="enter phonenumber"><br><br>
+<label for="nationality">NATIONALITY:</label>
+<input type ="checkbox" [(ngModel)]="nationality"  name="indian" nationality="indian" >indian<br>
+<input type ="checkbox" [(ngModel)]= "nationality"  name="other" nationality="other" >other<br><br>
+<button (click) = "onSave()">submit</button>
+<button (click)="onClear()">cancel</button>
+<ul>
+    <li *ngFor="let item of applicationForm">
+name:{{ item.name}} <br>Dob:{{ item.birthday}} <br>email:{{ item.email}}<br>gender: {{item.gender}} <br>institute:{{ item.institute}} <br>phoneno: {{item.phoneno}}<br>nationality: {{ item.nationality}} 
+    </li>
+</ul>

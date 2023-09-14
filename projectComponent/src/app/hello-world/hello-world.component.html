@@ -1,0 +1,9 @@
+<p class ="blue-color">WELCOME ALL</p>
+<input type = "text" [(ngModel)]="name" placeholder="enter the name"><br><br>
+<input type = "text" [(ngModel)]="age" placeholder="enter the age"><br><br>
+<button (click) = "onSave()">print</button>
+<ul>
+    <li *ngFor="let people of userList">
+        <ng-container *ngIf="people.age>=25 && people.age<=28" >{{ people.name }}</ng-container>
+    </li>
+</ul>

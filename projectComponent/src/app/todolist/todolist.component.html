@@ -1,0 +1,21 @@
+<p>to_do_list works!</p>
+<input type="text" name="task" [(ngModel)]="task">
+
+<button (click)="add()">Add </button>
+
+
+<ul>
+<li 
+    *ngFor="let i of tasks;let j=index ">
+    T{{j+1}}:{{ i }}&nbsp;&nbsp;<p></p>
+   
+    <p></p>
+    <button *ngIf="!isEdit" (click)="edit()">edit</button>
+    <button (click)="complete()">complete </button>
+    <div *ngIf="isEdit">
+        <button (click)= "save()">save</button>&nbsp;&nbsp;
+        <button (click)= "cancel()">cancel</button>
+    </div>
+    
+</li>
+</ul>
